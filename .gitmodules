@@ -1,0 +1,6 @@
+[submodule "lib/sokol"]
+	path = lib/sokol
+	url = https://github.com/floooh/sokol.git
+[submodule "lib/sokol-tools-bin"]
+	path = lib/sokol-tools-bin
+	url = https://github.com/floooh/sokol-tools-bin.git
