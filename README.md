@@ -3,11 +3,17 @@ EnigmaCraft is Minecraft clone made by Core Members of Enigma Club
 
 # Building
 
-## MacOS x86_64
+## MacOS 
 
 - Open Terminal in the project root and build the shader:
+
+For x86_64:
 ```
 lib/sokol-tools-bin/bin/osx/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l metal_macos
+```
+For ARM64:
+```
+lib/sokol-tools-bin/bin/osx_arm64/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l metal_macos
 ```
 - Build the app:
 ```
@@ -17,10 +23,6 @@ cc src/main.c lib/sokol.m -o build/enigma_craft -DSOKOL_METAL -fobjc-arc -I lib/
 ```
 ./build/enigma_craft
 ```
-
-## MacOS ARM64
-
-- It is same as x86_64, but instead of `lib/sokol-tools-bin/bin/osx/sokol-shdc` in first step, do `lib/sokol-tools-bin/bin/osx_arm64/sokol-shdc`
 
 ## Windows
 
