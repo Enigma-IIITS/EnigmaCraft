@@ -37,3 +37,18 @@ gcc src/main.c lib/sokol.c -o build/enigma_craft -mwin32 -O2 -DSOKOL_D3D11 -I li
 ./build/enigma_craft
 ```
 
+## Web (WASM + Webgl)
+
+- Open Terminal in project root and build the shader:
+```
+lib/sokol-tools-bin/bin/[platform]/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l glsl300es
+```
+- Build the app:
+```
+emcc src/main.c lib/sokol.c -o build_web/enigma_craft.html -DSOKOL_GLES3 -I lib/sokol -I lib -sUSE_WEBGL2 --shell-file=shell.html
+```
+- Run the app:
+```
+emrun build_web/enigma_craft.html
+```
+
