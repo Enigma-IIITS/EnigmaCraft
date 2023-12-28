@@ -3,6 +3,12 @@ EnigmaCraft is Minecraft clone made by Core Members of Enigma Club
 
 # Building
 
+## Makefile
+- Simply do:
+```
+make && ./build/engima_craft
+```
+
 ## MacOS 
 
 - Open Terminal in the project root and build the shader:
