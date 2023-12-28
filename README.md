@@ -24,6 +24,23 @@ cc src/main.c lib/sokol.m -o build/enigma_craft -DSOKOL_METAL -fobjc-arc -I lib/
 ./build/enigma_craft
 ```
 
+## Linux
+
+- Open Terminal in the project root and build the shader:
+
+For x86_64:
+```
+lib/sokol-tools-bin/bin/linux/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l glsl330
+```
+- Build the app:
+```
+cc src/main.c lib/sokol.c -o build/enigma_craft -DSOKOL_GLCORE33 -pthread -I lib/sokol -I lib -lGL -ldl -lm -lX11 -lasound -lXi -lXcursor
+```
+- Run the app:
+```
+./build/enigma_craft
+```
+
 ## Windows
 
 - Open Terminal in project root and build the shader:
