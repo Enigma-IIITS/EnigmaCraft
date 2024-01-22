@@ -49,13 +49,15 @@ cc src/main.c lib/sokol.c -o build/enigma_craft -DSOKOL_GLCORE33 -pthread -I lib
 
 ## Windows
 
+- Open Terminal in Developer Command Prompt for VS 2022 
+
 - Open Terminal in project root and build the shader:
 ```
-lib/sokol-tools-bin/bin/win32/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l hlsl5
+lib/sokol-tools-bin/bin/win32/sokol-shdc -i src/shader.glsl -o src/shader.glsl.h -l glsl330
 ```
 - Build the app:
 ```
-gcc src/main.c lib/sokol.c -o build/enigma_craft -mwin32 -O2 -DSOKOL_D3D11 -I lib/sokol -I lib -lkernel32 -luser32 -lshell32 -ldxgi -ld3d11 -lole32 -lgdi32
+cl src\main.c lib\sokol.c -o build\enigma_craft -Ilib\sokol -Ilib /DSOKOL_GLCORE33 kernel32.lib user32.lib gdi32.lib
 ```
 - Run the app:
 ```

@@ -2,3 +2,4 @@
 build
 build_web
 src/shader.glsl.h
+*.obj
